@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Drawer } from "expo-router/drawer";
 import CustomDrawerContent from "@/components/custom-drawer-content";
-import { setStatusBarStyle } from "expo-status-bar";
 import { Redirect } from "expo-router";
 import AuthContext from "@/utils/context";
 import Header from "@/components/header";
@@ -9,12 +8,6 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function AppLayout() {
   const { user } = useContext(AuthContext);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setStatusBarStyle("light");
-  //   }, 0);
-  // }, []);
 
   if (!user) {
     return <Redirect href="/" />;

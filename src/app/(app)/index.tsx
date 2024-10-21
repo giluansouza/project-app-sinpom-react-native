@@ -1,5 +1,6 @@
 import { View, Text, ActivityIndicator, FlatList } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
+import { router } from "expo-router";
 
 import data from "@/assets/data.json";
 import AuthContext from "@/utils/context";
@@ -33,6 +34,10 @@ export default function Home() {
 
   if (loading) {
     return <ActivityIndicator size="large" color="#00ff00" />;
+  }
+
+  if (!user) {
+    router.replace("/");
   }
 
   return (

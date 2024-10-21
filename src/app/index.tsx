@@ -5,10 +5,11 @@ import {
   TouchableOpacity,
   Platform,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FormTextField } from "@/components/form-text-fied";
 import { router } from "expo-router";
 import { loadUser, login } from "@/services/auth-service";
+import AuthContext from "@/utils/context";
 
 interface Errors {
   email?: string;
