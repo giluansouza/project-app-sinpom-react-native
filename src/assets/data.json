@@ -1,0 +1,379 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "yNtXK@example.com",
+      "level": "Agente"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "hKw9H@example.com",
+      "level": "Cmdte"
+    }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "title": "REUNIÃO GERAL DE ALINHAMENTO PARA OPERAÇÃO ELEIÇÕES",
+      "content": "Data: 03 de outubro, quinta, 9h. Reunião c/ todos os Agentes do SINPOM, via MS Teans. O link p/ reunião foi encaminhado p/ os e-mails cadastrados no Portal. O modelo do evento será Webnário, as cam e os audios estarão travados. Todas as perguntas deverão ser encaminhadas via chat.",
+      "date": "27/09/2024 14:00"
+    },
+    {
+      "id": 2,
+      "title": "INSTRUÇÃO PORTAL SINPOM E ELEIÇÕES PARA REGIÃO NORDESTE",
+      "content": "Reunião c/ instrutores do CoInt. Data de 02/OUT, quarta, 9h, em local a ser definido pelo CPRNE. Todos os Agentes (só credenciados) das: CoordOIntNE, 20º BPM, CIPT/NE e CIPE-NE deverão comparecer. Os Agentes dos: 5º BPM, 16º BPM e 21ª CIPM, assistirão a aula pelo MS Teams. Dúvidas c/ o CPRNE.",
+      "date": "27/09/2024 14:00"
+    },
+    {
+      "id": 3,
+      "title": "INSTRUÇÃO PORTAL SINPOM E ELEIÇÕES PARA REGIÃO NORTE",
+      "content": "Reunião com os instrutores do CoInt na data de 01/OUT, terça-feira, 9h, na Sede do 3º BEIC. Todos os Agentes (apenas credenciados) das UOPM, das UOE e do 3º BEIC, sediadas na região, deverão comparecer ao evento. Dúvidas, favor consultar a CoordOInt Norte.",
+      "date": "27/09/2024 14:00"
+    },
+    {
+      "id": 4,
+      "title": "ESCALAS DE SERVIÇO PARA OPERAÇÃO ELEIÇÕES 2024",
+      "content": "Todos os Ch. das CoordOInt deverão encaminhar as Escalas de Serviço da Op. Eleições, dos efetivos sob seu Cmdo, até 02 de outubro de 24, p/ o e-mail: coint.ciade@pm.ba.gov.br . As Escalas deverão observar a formatação orientada pela Diretriz nº 05 CIADE/24 (já encaminhada por e-mail p/ CoordOInt)",
+      "date": "19/09/2024 10:00"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 10,
+      "origin": "25ª CIPM - CASA NOVA",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 9,
+      "origin": "73ª CIPM - JUAZEIRO",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 8,
+      "origin": "96ª CIPM - SOBRADINHO",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 2,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 3,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 4,
+      "origin": "54ª CIPM - CAMPO FORMOSO",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 5,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "CUMPRIMENTO DE MANDADO DE PRISÃO DE FORAGIDO",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 6,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 7,
+      "origin": "CIPT - N",
+      "type": "Relatório de Inteligência",
+      "date": "19/09/2024 10:00",
+      "title": "Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    }
+  ],
+  "outputDocuments": [
+    {
+      "id": 1,
+      "origin": "COINT",
+      "date": "19/09/2024 10:00",
+      "status": "submitted",
+      "title": "Relatório de Inteligência - Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 2,
+      "origin": "CIPT - N",
+      "date": "19/09/2024 10:00",
+      "status": "completed",
+      "title": "Relatório de Inteligência - Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 3,
+      "origin": "CIPT - N",
+      "date": "19/09/2024 10:00",
+      "status": "draft",
+      "title": "Relatório de Inteligência - Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    },
+    {
+      "id": 4,
+      "origin": "54ª CIPM - CAMPO FORMOSO",
+      "date": "19/09/2024 10:00",
+      "status": "draft",
+      "title": "Relatório de Inteligência - Recuperação de motocicleta com restrição de roubo",
+      "content": "No dia 25/09, por volta das 22h50, este SOInt recebeu informações de que uma motocicleta HONDA/CG 160 TITAN, cor vermelha, placa RZH6D62, roubada na cidade de Petrolina-PE, conforme boletim nº 24e2149008141, equipada com rastreador, estava localizada na Rua Belo Jardim, nº 549, Bairro Argemiro, em Juazeiro. De imediato, as guarnições da CIPT-Norte foram acionadas e se deslocaram até o local. Durante a diligência, a nacional Raiza Ketlen dos Santos Teles chegou à residência, identificando-se como proprietária. Ao ser questionada sobre a origem da motocicleta, afirmou que a única pessoa a quem havia entregue a chave da casa foi seu primo, Pedro Lucas dos Santos Waltmann, o que foi confirmado pela mãe de Pedro Lucas, a nacional Maria Sileide dos Santos. Diante dos fatos, a envolvida e a motocicleta foram conduzidas à 1ª Delegacia Territorial de Juazeiro-BA para as medidas cabíveis, conforme o BO nº 00658165/2024."
+    }
+  ],
+  "occurrences": [
+    {
+      "id": 1,
+      "dateFact": "27/09/2024 14:00",
+      "type": "CRIMES CONTRA A VIDA (TODOS)",
+      "opm": "54ª CIPM - CAMPO FORMOSO",
+      "opmArea": "54ª COMPANHIA INDEPENDENTE DE POLÍCIA MILITAR - CAMPO FORMOSO",
+      "date": "27/09/2024 14:00",
+      "numberDp": "Número Estadual do Procedimento 00665371/2024",
+      "motivation": "Disputa entre facções",
+      "entities": [
+        {
+          "id": 1,
+          "disabled": false,
+          "status": "Vítima",
+          "name": "GILBERTO ALVES DA SILVA",
+          "profession": "COMERCIANTE",
+          "service": "",
+          "condition": "Morto"
+        }
+      ],
+      "orcrimArea": "Não informado",
+      "address": "CONJUNTO HABITACIONAL MINHA CASA MINHA VIDA, RUA MORRINHOS, ponto de referência BLOCO 02, MARIA JOANA ZONA Urbana - Campo Formoso/BA",
+      "coordinates": {
+        "lat": -10.496224,
+        "lng": -40.318728
+      },
+      "description": "Por volta das 2 horas, da madrugada do dia 29/09/2024, no Conjunto Habitacional Minha Casa Minha Vida, rua Morrinhos, Bloco 02, bairro Maria Joana, sede do município de Campo Formoso-BA, nas coordenadas geográficas (-10.495362, -40.318526), o nacional GILBERTO ALVES DA SILVA, de 47 anos, nascido em 02/11/1976, portador do CPF: 853.535.665-72 e do R.G: 14.941.642-30, filho de Sabino Vieira Alves e Delzuíta Alves da Silva, residente na rua 13 de maio, bairro Colina do Sul, Campo Formoso, foi encontrado caído ao solo com sinais de espancamento, e com um corte na cabeça, provavelmente provocado por instrumento perfurocortante (facão). O Serviço de Atendimento Móvel de Urgência-SAMU foi acionado e prestou os primeiros socorros, conduzindo a vítima até o Hospital São Francisco, que após atendimento não resistiu aos ferimentos e evoluiu a óbito naquele nosocômio. Até o presente momento não surgiu nenhuma informação acerca da autoria e motivação do crime."
+    },
+    {
+      "id": 2,
+      "dateFact": "26/09/2024 - 12:20",
+      "type": "CRIMES CONTRA A VIDA (TODOS)",
+      "opm": "45ª CIPM - CURAÇÁ",
+      "opmArea": "45ª COMPANHIA INDEPENDENTE DE POLÍCIA MILITAR - CURAÇÁ",
+      "date": "27/09/2024 14:00",
+      "numberDp": "",
+      "motivation": "NÃO IDENTIFICADO",
+      "entities": [
+        {
+          "id": 1,
+          "disabled": false,
+          "status": "Vítima",
+          "name": "Marcos Freitas da Silva",
+          "profession": "",
+          "service": "",
+          "condition": "Morto"
+        },
+        {
+          "id": 2,
+          "disabled": false,
+          "status": "Vítima",
+          "name": "José Antônio Freitas da Silva",
+          "profession": "",
+          "service": "",
+          "condition": "Ferido"
+        }
+      ],
+      "orcrimArea": "Não informado",
+      "address": "Povoado Núcleo 50, ponto de referência Povoado Núcleo 50, Povoado Núcleo 50 ZONA Urbana - Canudos/BA",
+      "coordinates": {
+        "lat": -9.893847,
+        "lng": -39.031542
+      },
+      "description": "Informo a Vossa Senhoria que, por volta das 12h20, durante realização da Operação Força Total, a guarnição foi nformada que na localidade conhecida por 'Nucleo 50', havia uma vítima de disparos de arma de fogo. De imediato os policiais deslocaram ao local constatando a veracidade da informação, sendo a vitima a saber de nome Marcos Freitas da Silva, conhecido como Marquinhos da cinquenta, nascido em 25/08/1982. Além disso, foi informado que um segundo homem também havia sido atingido pelos disparos e que o mesmo havia deslocado para a residência da sua mãe de nome Terezinha Freitas da Silva. Os policiais deslocaram ao endereço indicado por populares como sendo da mãe das vítimas, chegando na residência, foi constatado que o Sr. José Antônio Freitas da Silva, apresentava ferimentos na altura da costela. De imediato lhe foi prestado socorro até o Hospital Municipal de Canudos. O ocorrido foi informado ao Cicom Nordeste e ao DPT de Euclides da Cunha. Considerando o surgimento de novas informações elas serão imediatamente repassadas à CoordOINt/CPR-N."
+    },
+    {
+      "id": 3,
+      "dateFact": "26/09/2024 - 15:20",
+      "type": "LESÃO CORPORAL OU MORTE POR INTERVENÇÃO POLICIAL MILITAR",
+      "occurrenceOrigin": "REAÇÃO A PRESENÇA POLICIAL",
+      "opm": "CIPT - N",
+      "opmArea": "76ª COMPANHIA INDEPENDENTE DE POLÍCIA MILITAR - JUAZEIRO",
+      "date": "27/09/2024 14:00",
+      "numberDp": "",
+      "motivation": "",
+      "entities": [
+        {
+          "id": 1,
+          "disabled": false,
+          "status": "Condutor (de ocorrência)",
+          "name": "EDMILDO MORENO SOBRAL JUNIOR",
+          "profession": "Policial Militar (Ativa)",
+          "service": "Em serviço",
+          "condition": "Ileso"
+        },
+        {
+          "id": 2,
+          "disabled": false,
+          "status": "Testemunha",
+          "name": "ANA PAULA LIMA CARDOSO",
+          "profession": "Policial Militar (Ativa)",
+          "service": "Em serviço",
+          "condition": "Ileso"
+        },
+        {
+          "id": 3,
+          "disabled": false,
+          "status": "Testemunha",
+          "name": "SANDRO ALAN GONCALVES DE BARROS",
+          "profession": "Policial Militar (Ativa)",
+          "service": "Em serviço",
+          "condition": "Ileso"
+        },
+        {
+          "id": 4,
+          "disabled": false,
+          "status": "Autor de crime",
+          "name": "IVANIO DO AMARAL SILVA",
+          "profession": "",
+          "service": "",
+          "condition": "Morto"
+        },
+        {
+          "id": 5,
+          "disabled": true,
+          "status": "",
+          "name": "Pistola Taurus, CALIBRE 380, PERTENCENTE À Desconhecida",
+          "profession": "",
+          "service": "",
+          "condition": ""
+        }
+      ],
+      "orcrimArea": "NÃO INFORMADA",
+      "address": "Rua Sete, s/n, ponto de referência Não informado, Jardim das Acácias ZONA Urbana - Juazeiro/BA",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "description": "Por volta das 2 horas, da madrugada do dia 29/09/2024, no Conjunto Habitacional Minha Casa Minha Vida, rua Morrinhos, Bloco 02, bairro Maria Joana, sede do município de Campo Formoso-BA, nas coordenadas geográficas (-10.495362, -40.318526), o nacional GILBERTO ALVES DA SILVA, de 47 anos, nascido em 02/11/1976, portador do CPF: 853.535.665-72 e do R.G: 14.941.642-30, filho de Sabino Vieira Alves e Delzuíta Alves da Silva, residente na rua 13 de maio, bairro Colina do Sul, Campo Formoso, foi encontrado caído ao solo com sinais de espancamento, e com um corte na cabeça, provavelmente provocado por instrumento perfurocortante (facão). O Serviço de Atendimento Móvel de Urgência-SAMU foi acionado e prestou os primeiros socorros, conduzindo a vítima até o Hospital São Francisco, que após atendimento não resistiu aos ferimentos e evoluiu a óbito naquele nosocômio. Até o presente momento não surgiu nenhuma informação acerca da autoria e motivação do crime."
+    },
+    {
+      "id": 4,
+      "dateFact": "27/09/2024 14:00",
+      "type": "CRIMES CONTRA A VIDA (TODOS)",
+      "opm": "75ª CIPM - JUAZEIRO",
+      "opmArea": "75ª COMPANHIA INDEPENDENTE DE POLÍCIA MILITAR - JUAZEIRO",
+      "date": "23/09/2024 - 22:49",
+      "numberDp": "",
+      "motivation": "PASSIONAL",
+      "entities": [
+        {
+          "id": 1,
+          "disabled": false,
+          "status": "Vítima",
+          "name": "Luciano Souza dos Anjos",
+          "profession": "",
+          "service": "",
+          "condition": "Ferido"
+        },
+        {
+          "id": 2,
+          "disabled": false,
+          "status": "Autor de crime",
+          "name": "Aline de Almeida Silva",
+          "profession": "",
+          "service": "",
+          "condition": "Ileso"
+        }
+      ],
+      "orcrimArea": "BONDE DO MALUCO (BDM)",
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "address": "Rua sol levante, ponto de referência .., Sol Levante ZONA Urbana - Juazeiro/BA",
+      "description": "Deslocamos até a UPA para verificar a informação de que havia dado entrada na UPA uma pessoa vítima de arma branca. Chegando ao local mantivemos contato com o senhor Luciano Souza dos Anjos que nós informou ter sofrido vários golpes de arma branca deferidos por sua companheira Aline de Almeida Silva. Segundo informações do mesmo disse morar próximo a um condomínio no antigo Loteamento Barranqueiros hoje Monte Castelo no Bairro vizinho Sol Levante próximo a Avenida Sol Levante.Segundo o mesmo ele foi primeiro para a delegacia e lá mandaram ele para a UPA. Fizemos alfa 16 utilizando as informações passadas pela vítima porém sem êxito. Foi solicitado ao CICOM para informar ao DHPP e fomos informados de que a IPC Francilda já estava ciente do fato. De acordo com o preposto da UPA ele não corre risco de morte e seria levado para o Hospital de Traumas. A vítima estava sem nenhum documento de identificação."
+    }
+  ],
+  "people": [
+    {
+      "id": 1,
+      "name": "WENDEL FURTADO DE MORAIS",
+      "profession": "NI",
+      "mother": "LUCICLEIDE FURTADO DA SILVA",
+      "father": "EDIVALDO CONSTATINO DE MORAIS",
+      "rg": "2160778427",
+      "birthday": "23/08/2001",
+      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
+      "orcrim": "COMANDO VERMELHO (CV)",
+      "function": "Fornecedor de drogas",
+      "register": "SIM",
+      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
+      "condition": "Ferido",
+      "disabled": false
+    },
+    {
+      "id": 2,
+      "name": "LUCICLEIDE FURTADO DA SILVA",
+      "profession": "NI",
+      "mother": "WENDEL FURTADO DE MORAIS",
+      "father": "EDIVALDO CONSTATINO DE MORAIS",
+      "rg": "2160778427",
+      "birthday": "23/08/2001",
+      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
+      "orcrim": "COMANDO VERMELHO (CV)",
+      "function": "Fornecedor de drogas",
+      "register": "SIM",
+      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
+      "condition": "Ferido",
+      "disabled": false
+    },
+    {
+      "id": 3,
+      "name": "EDIVALDO CONSTATINO DE MORAIS",
+      "profession": "NI",
+      "mother": "LUCICLEIDE FURTADO DA SILVA",
+      "father": "WENDEL FURTADO DE MORAIS",
+      "rg": "2160778427",
+      "birthday": "23/08/2001",
+      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
+      "orcrim": "COMANDO VERMELHO (CV)",
+      "function": "Fornecedor de drogas",
+      "register": "SIM",
+      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
+      "condition": "Ferido",
+      "disabled": false
+    }
+  ]
+}
