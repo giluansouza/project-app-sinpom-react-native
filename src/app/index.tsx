@@ -46,7 +46,7 @@ export default function Login() {
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-1 items-center justify-center px-6 py-6">
-        <Text className="text-3xl font-bold text-sky-500">SINPOM</Text>
+        <Text className="text-3xl font-bold text-zinc-700">SINPOM</Text>
 
         <FormTextField
           label="Email"

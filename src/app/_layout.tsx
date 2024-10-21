@@ -26,15 +26,10 @@ export default function RootLayout() {
   return (
     <AuthContext.Provider value={{ user, setUser }}>
       <GluestackUIProvider mode="dark">
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <Stack
-            initialRouteName="index"
-            screenOptions={{ headerShown: false }}
-          >
-            <Stack.Screen name="index" />
-            {/* <Stack.Screen name="(app)" /> */}
-          </Stack>
-        </GestureHandlerRootView>
+        <Stack initialRouteName="index" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" />
+          {/* <Stack.Screen name="(app)" /> */}
+        </Stack>
         <StatusBar barStyle="dark-content" />
       </GluestackUIProvider>
     </AuthContext.Provider>

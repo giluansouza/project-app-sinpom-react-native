@@ -36,7 +36,7 @@ export default function Home() {
   }
 
   return (
-    <View className="flex-1 border">
+    <View className="flex-1">
       <FlatList
         data={notices}
         keyExtractor={(item) => item.id.toString()}
@@ -46,7 +46,7 @@ export default function Home() {
           </View>
         )}
         renderItem={({ item }) => (
-          <View className="mx-4 my-2 bg-white p-4">
+          <View className="mx-4 my-2 bg-white p-4 rounded-lg shadow-md">
             <Text className="text-sm text-slate-500">
               Criado em {item.date}
             </Text>
