@@ -74,6 +74,12 @@ export default function Login() {
         >
           <Text className="text-white text-lg">Entrar</Text>
         </TouchableOpacity>
+
+        <View className="mt-4">
+          <Text>Acesso:</Text>
+          <Text>user@owl.com</Text>
+          <Text>12345678</Text>
+        </View>
       </View>
     </SafeAreaView>
   );

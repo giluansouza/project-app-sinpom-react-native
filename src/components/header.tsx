@@ -3,19 +3,21 @@ import React, { useContext, useState } from "react";
 import { DrawerActions, useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Feather from "@expo/vector-icons/Feather";
-import Popover, { PopoverMode } from "react-native-popover-view";
-import { DropdownHeader } from "./dropdown-header";
+import Popover from "react-native-popover-view";
 import { LogOut, ReceiptText, UserPen } from "lucide-react-native";
 import AuthContext from "@/utils/context";
+import { router } from "expo-router";
+import { setToken } from "@/services/token-service";
 
 export default function Header({ title }: { title: string }) {
   const navigation = useNavigation();
   const [isPopoverVisible, setPopoverVisible] = useState(false);
-  const { user } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
 
-  const handleSignOut = () => {
-    // Lógica para sair do app
-    console.log("Sign out");
+  const handleSignOut = async () => {
+    setUser(null);
+    await setToken("");
+    router.replace("/");
   };
 
   return (

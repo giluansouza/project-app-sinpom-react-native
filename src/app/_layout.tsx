@@ -9,21 +9,21 @@ import { StatusBar } from "react-native";
 export default function RootLayout() {
   const [user, setUser] = useState<any>(null);
 
-  useEffect(() => {
-    async function runEffect() {
-      try {
-        const user = await loadUser();
-        if (user) {
-          setUser(user);
-          router.navigate("/(app)");
-        }
-      } catch (e) {
-        console.log("Failed to load user", e);
-      }
-    }
+  // useEffect(() => {
+  //   async function runEffect() {
+  //     try {
+  //       const user = await loadUser();
+  //       if (user) {
+  //         setUser(user);
+  //         router.navigate("/(app)");
+  //       }
+  //     } catch (e) {
+  //       console.log("Failed to load user", e);
+  //     }
+  //   }
 
-    runEffect();
-  }, []);
+  //   runEffect();
+  // }, []);
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
