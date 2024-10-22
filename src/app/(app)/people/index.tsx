@@ -44,14 +44,14 @@ export default function Index() {
     }
   };
 
-  useFocusEffect(
-    React.useCallback(() => {
-      setInputName("");
-      setPeople([]);
-      setPage(1);
-      setHasMore(true);
-    }, [])
-  );
+  // useFocusEffect(
+  //   React.useCallback(() => {
+  //     setInputName("");
+  //     setPeople([]);
+  //     setPage(1);
+  //     setHasMore(true);
+  //   }, [])
+  // );
 
   const handleFilter = () => {
     if (inputName === "") {

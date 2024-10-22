@@ -1,18 +1,11 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  Platform,
-} from "react-native";
-import React, { useContext, useEffect, useState } from "react";
+import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
 import { FormTextField } from "@/components/form-text-fied";
+import { useSession } from "@/utils/context";
 import { router } from "expo-router";
-import { loadUser, login } from "@/services/auth-service";
-import AuthContext from "@/utils/context";
 
 interface Errors {
-  email?: string;
+  general?: string;
   password?: string;
 }
 
@@ -20,27 +13,19 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<Errors>({});
+  const { login } = useSession();
 
   const handleLogin = async () => {
     setErrors({});
+    const result = await login(email, password);
 
-    try {
-      await login({
-        email,
-        password,
-        device_name: `${Platform.OS} ${Platform.Version}`,
-      });
-
-      const user = await loadUser();
-
-      if (user) {
-        router.replace("/(app)");
-      }
-    } catch (e: any) {
-      if (e.response?.status === 422) {
-        setErrors(e.response.data.errors);
-      }
-      console.log(e);
+    if (result === true) {
+      router.replace("/(app)");
+    } else {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        general: result as string,
+      }));
     }
   };
 
@@ -64,8 +49,8 @@ export default function Login() {
           onChangeText={(text: string) => setPassword(text)}
         />
 
-        {errors.email && (
-          <Text className="text-red-500 my-4">{errors?.email}</Text>
+        {errors.general && (
+          <Text className="text-red-500 my-4">{errors?.general}</Text>
         )}
 
         <TouchableOpacity

@@ -1,7 +1,7 @@
 import axios from "@/utils/axios";
 import { getToken, setToken } from "./token-service";
 
-export async function login(credentials: {
+export async function getLogin(credentials: {
   email: string;
   password: string;
   device_name: string;

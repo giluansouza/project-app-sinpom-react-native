@@ -1,16 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Drawer } from "expo-router/drawer";
 import CustomDrawerContent from "@/components/custom-drawer-content";
-import { Redirect } from "expo-router";
-import AuthContext from "@/utils/context";
+import { Redirect, Stack } from "expo-router";
+import { useSession } from "@/utils/context";
 import Header from "@/components/header";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Loading } from "@/components/loading";
 
 export default function AppLayout() {
-  const { user } = useContext(AuthContext);
+  const { session, isLoading } = useSession();
 
-  if (!user) {
-    return <Redirect href="/" />;
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (!session) {
+    return <Redirect href="/login" />;
   }
 
   return (

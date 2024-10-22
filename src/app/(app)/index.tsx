@@ -1,12 +1,9 @@
 import { View, Text, ActivityIndicator, FlatList } from "react-native";
-import React, { useContext, useEffect, useState } from "react";
-import { router } from "expo-router";
+import React, { useEffect, useState } from "react";
 
 import data from "@/assets/data.json";
-import AuthContext from "@/utils/context";
 
 export default function Home() {
-  const { user, setUser } = useContext(AuthContext);
   const [notices, setNotices] = useState<
     | {
         id: number;
@@ -16,7 +13,7 @@ export default function Home() {
       }[]
     | null
   >(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,20 +22,20 @@ export default function Home() {
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  if (loading) {
-    return <ActivityIndicator size="large" color="#00ff00" />;
-  }
+  // if (loading) {
+  //   return <ActivityIndicator size="large" color="#00ff00" />;
+  // }
 
-  if (!user) {
-    router.replace("/");
-  }
+  // if (!user) {
+  //   router.replace("/");
+  // }
 
   return (
     <View className="flex-1">
