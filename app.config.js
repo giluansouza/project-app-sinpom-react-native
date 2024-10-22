@@ -2,9 +2,36 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+const IS_DEV = process.env.APP_VARIANT === 'development';
+const IS_PREVIEW = process.env.APP_VARIANT === 'preview';
+
+const getUniqueIdentifier = () => {
+  if (IS_DEV) {
+    return 'com.giluansouza.sinpom.dev';
+  }
+
+  if (IS_PREVIEW) {
+    return 'com.giluansouza.sinpom.preview';
+  }
+
+  return 'com.giluansouza.sinpom';
+};
+
+const getAppName = () => {
+  if (IS_DEV) {
+    return 'StickerSmash (Dev)';
+  }
+
+  if (IS_PREVIEW) {
+    return 'StickerSmash (Preview)';
+  }
+
+  return 'StickerSmash: Emoji Stickers';
+};
+
 export default {
   expo: {
-    name: "Sinpom",
+    name: getAppName(),
     slug: "sinpom",
     version: "1.0.0",
     orientation: "portrait",
@@ -17,6 +44,7 @@ export default {
       backgroundColor: "#ffffff"
     },
     ios: {
+      bundleIdentifier: getUniqueIdentifier(),
       supportsTablet: true
     },
     android: {
@@ -24,7 +52,7 @@ export default {
         foregroundImage: "./src/assets/images/adaptive-icon.png",
         backgroundColor: "#ffffff"
       },
-      package: "com.giluansouza.sinpom",
+      package: getUniqueIdentifier(),
       permissions: [
         "android.permission.INTERNET"
       ],
