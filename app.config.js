@@ -19,14 +19,14 @@ const getUniqueIdentifier = () => {
 
 const getAppName = () => {
   if (IS_DEV) {
-    return 'StickerSmash (Dev)';
+    return 'SINPOM (Dev)';
   }
 
   if (IS_PREVIEW) {
-    return 'StickerSmash (Preview)';
+    return 'SINPOM (Preview)';
   }
 
-  return 'StickerSmash: Emoji Stickers';
+  return 'SINPOM';
 };
 
 export default {
@@ -58,7 +58,7 @@ export default {
       ],
       config: {
         googleMaps: {
-          apiKey: process.env.GOOGLE_MAPS_API_KEY
+          apiKey: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY
         }
       }
     },
