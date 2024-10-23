@@ -1,4 +1,10 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import React, { useState } from "react";
 import { FormTextField } from "@/components/form-text-fied";
 import { useSession } from "@/utils/context";
@@ -14,10 +20,15 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<Errors>({});
   const { login } = useSession();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleLogin = async () => {
     setErrors({});
+    setIsSubmitting(true);
+
     const result = await login(email, password);
+
+    setIsSubmitting(false);
 
     if (result === true) {
       router.replace("/(app)");
@@ -56,8 +67,13 @@ export default function Login() {
         <TouchableOpacity
           className="w-full rounded-md bg-blue-500 p-3 items-center justify-center mt-4"
           onPress={handleLogin}
+          disabled={isSubmitting}
         >
-          <Text className="text-white text-lg">Entrar</Text>
+          {isSubmitting ? (
+            <ActivityIndicator color="white" />
+          ) : (
+            <Text className="text-white text-lg">Entrar</Text>
+          )}
         </TouchableOpacity>
 
         <View className="mt-4">
