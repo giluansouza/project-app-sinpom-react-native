@@ -50,28 +50,30 @@ export default function People() {
             <Text className="font-bold">Nome:</Text> {people?.name}
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">Profissão:</Text> Não informado
+            <Text className="font-bold">Profissão:</Text> {people?.profession}
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">Mãe:</Text> Não identificado
+            <Text className="font-bold">Mãe:</Text> {people?.mother}
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">Pai:</Text> Não identificado
+            <Text className="font-bold">Pai:</Text> {people?.father}
           </Text>
           <Text className="text-base">
             <Text className="font-bold">CPF:</Text> {people?.cpf}
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">RG:</Text> 000
+            <Text className="font-bold">RG:</Text> {people?.rg}
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">Nascimento:</Text> 00/00/1900
+            <Text className="font-bold">Nascimento:</Text>{" "}
+            {people?.birthDate &&
+              new Date(people?.birthDate).toLocaleDateString("pt-BR")}
           </Text>
           <Text className="text-base">
             <Text className="font-bold">Endereço:</Text> Não informado
           </Text>
           <Text className="text-base">
-            <Text className="font-bold">Facção:</Text> Não informado
+            <Text className="font-bold">Facção:</Text> {people?.crimeGroup}
           </Text>
           <Text className="text-base">
             <Text className="font-bold">Função:</Text> Não informado

@@ -1,17 +1,20 @@
-import React from 'react'
-import { Stack } from 'expo-router'
+import React from "react";
+import { Stack } from "expo-router";
 
 export default function _layout() {
   return (
-    <Stack 
-      // screenOptions={{ headerShown: false }}
+    <Stack
+    // screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="[id]" options={{ headerShown: false }} />
-      <Stack.Screen name="modal" options={{
-        presentation: 'modal',
-        title: 'Mais filtros',
-      }} />
+      <Stack.Screen
+        name="new"
+        options={{
+          presentation: "modal",
+          title: "Nova Pessoa",
+        }}
+      />
     </Stack>
-  )
+  );
 }

@@ -9,11 +9,19 @@ import React, { useState } from "react";
 import { FormTextField } from "@/components/form-text-fied";
 import { useSession } from "@/utils/context";
 import { router } from "expo-router";
+import { z } from "zod";
 
 interface Errors {
   general?: string;
   password?: string;
 }
+
+const formSchema = z.object({
+  email: z.string().email({ message: "Email inválido" }),
+  password: z.string().min(6, { message: "Senha inválida" }),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 export default function Login() {
   const [email, setEmail] = useState("");

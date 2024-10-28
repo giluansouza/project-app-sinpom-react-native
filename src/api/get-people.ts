@@ -3,10 +3,23 @@ import axios from "@/utils/axios";
 
 export interface Person {
   id: number;
+  image: string;
   name: string;
   cpf: string;
-  image: string | null; // `image` pode ser null
-  organization_id: number;
+  rg: string;
+  birthDate: string;
+  gender: string;
+  father: string;
+  mother: string;
+  profession: string;
+  color: string;
+  nicknames: string;
+  crimeGroup: number;
+  function: string;
+  priority: string;
+  hasCriminalRecords: false;
+  recordDescription: string;
+  workArea: string;
   created_at: string;
   updated_at: string;
 }

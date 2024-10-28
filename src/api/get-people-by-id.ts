@@ -1,15 +1,6 @@
 import { getToken } from "@/services/token-service";
 import axios from "@/utils/axios";
-
-export interface Person {
-  id: number;
-  name: string;
-  cpf: string;
-  image: string | null;
-  organization_id: number;
-  created_at: string;
-  updated_at: string;
-}
+import type { Person } from "./get-people";
 
 export interface SinglePersonResponse {
   data: Person;

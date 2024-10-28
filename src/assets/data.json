@@ -326,54 +326,170 @@
       "description": "Deslocamos até a UPA para verificar a informação de que havia dado entrada na UPA uma pessoa vítima de arma branca. Chegando ao local mantivemos contato com o senhor Luciano Souza dos Anjos que nós informou ter sofrido vários golpes de arma branca deferidos por sua companheira Aline de Almeida Silva. Segundo informações do mesmo disse morar próximo a um condomínio no antigo Loteamento Barranqueiros hoje Monte Castelo no Bairro vizinho Sol Levante próximo a Avenida Sol Levante.Segundo o mesmo ele foi primeiro para a delegacia e lá mandaram ele para a UPA. Fizemos alfa 16 utilizando as informações passadas pela vítima porém sem êxito. Foi solicitado ao CICOM para informar ao DHPP e fomos informados de que a IPC Francilda já estava ciente do fato. De acordo com o preposto da UPA ele não corre risco de morte e seria levado para o Hospital de Traumas. A vítima estava sem nenhum documento de identificação."
     }
   ],
-  "people": [
+  "functions": [
     {
-      "id": 1,
-      "name": "WENDEL FURTADO DE MORAIS",
-      "profession": "NI",
-      "mother": "LUCICLEIDE FURTADO DA SILVA",
-      "father": "EDIVALDO CONSTATINO DE MORAIS",
-      "rg": "2160778427",
-      "birthday": "23/08/2001",
-      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
-      "orcrim": "COMANDO VERMELHO (CV)",
-      "function": "Fornecedor de drogas",
-      "register": "SIM",
-      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
-      "condition": "Ferido",
-      "disabled": false
+      "value": "1",
+      "label": "Não informado"
     },
     {
-      "id": 2,
-      "name": "LUCICLEIDE FURTADO DA SILVA",
-      "profession": "NI",
-      "mother": "WENDEL FURTADO DE MORAIS",
-      "father": "EDIVALDO CONSTATINO DE MORAIS",
-      "rg": "2160778427",
-      "birthday": "23/08/2001",
-      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
-      "orcrim": "COMANDO VERMELHO (CV)",
-      "function": "Fornecedor de drogas",
-      "register": "SIM",
-      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
-      "condition": "Ferido",
-      "disabled": false
+      "value": "2",
+      "label": "Líder"
     },
     {
-      "id": 3,
-      "name": "EDIVALDO CONSTATINO DE MORAIS",
-      "profession": "NI",
-      "mother": "LUCICLEIDE FURTADO DA SILVA",
-      "father": "WENDEL FURTADO DE MORAIS",
-      "rg": "2160778427",
-      "birthday": "23/08/2001",
-      "address": "RUA DOIS, 463, ITABERABA, ponto de referência: null. Juazeiro/BA",
-      "orcrim": "COMANDO VERMELHO (CV)",
-      "function": "Fornecedor de drogas",
-      "register": "SIM",
-      "atuation": "ITABERABA; RESIDENCIAL JUAZEIRO",
-      "condition": "Ferido",
-      "disabled": false
+      "value": "3",
+      "label": "Chefe"
+    },
+    {
+      "value": "4",
+      "label": "Assessor"
+    },
+    {
+      "value": "5",
+      "label": "Gerente"
+    },
+    {
+      "value": "6",
+      "label": "Executor"
+    },
+    {
+      "value": "7",
+      "label": "Jóquei"
+    },
+    {
+      "value": "8",
+      "label": "Segurança"
+    },
+    {
+      "value": "9",
+      "label": "Motorista"
+    },
+    {
+      "value": "10",
+      "label": "Tesoureiro"
+    },
+    {
+      "value": "11",
+      "label": "Armeiro"
+    },
+    {
+      "value": "12",
+      "label": "Laranja - oculta patrimônio"
+    },
+    {
+      "value": "13",
+      "label": "Assaltante de banco"
+    },
+    {
+      "value": "14",
+      "label": "Braço operacional"
+    },
+    {
+      "value": "15",
+      "label": "Braço administrativo"
+    },
+    {
+      "value": "16",
+      "label": "Fornecedor de drogas"
+    },
+    {
+      "value": "17",
+      "label": "Fornecedor de armas e munições"
+    },
+    {
+      "value": "18",
+      "label": "Líder de pavilhão"
+    },
+    {
+      "value": "19",
+      "label": "Frente"
+    },
+    {
+      "value": "20",
+      "label": "Torre"
+    },
+    {
+      "value": "21",
+      "label": "Financeiro"
+    },
+    {
+      "value": "22",
+      "label": "Logística"
+    }
+  ],
+  "priorities": [
+    {
+      "value": "1",
+      "label": "Baixa prioridade"
+    },
+    {
+      "value": "2",
+      "label": "Preso"
+    },
+    {
+      "value": "3",
+      "label": "Sem mandado"
+    },
+    {
+      "value": "4",
+      "label": "Com mandado"
+    },
+    {
+      "value": "5",
+      "label": "Preso sensível"
+    },
+    {
+      "value": "6",
+      "label": "Prioritário sem mandado"
+    },
+    {
+      "value": "7",
+      "label": "Prioritário com mandado"
+    }
+  ],
+  "occurrencesTypes": [
+    {
+      "value": "148",
+      "label": "ACIDENTE COM VIATURA PMBA"
+    },
+    {
+      "value": "152",
+      "label": "ACIDENTES DIVERSOS COM POLICIAL MILITAR DA BAHIA"
+    },
+    {
+      "value": "145",
+      "label": "AMEAÇA A POLICIAL MILITAR DA BAHIA"
+    },
+    {
+      "value": "149",
+      "label": "CRIME CONTRA VIDA (TODOS)"
+    },
+    {
+      "value": "157",
+      "label": "CRIMES FINANCEIROS (TODOS)"
+    },
+    {
+      "value": "143",
+      "label": "EXTRAVIO DE ARMA DE FOGO"
+    },
+    {
+      "value": "144",
+      "label": "EXTRAVIO DE IDENTIDADE FUNCIONAL PMBA"
+    },
+    {
+      "value": "141",
+      "label": "FURTO DE ARMA DE FOGO"
+    },
+    {
+      "value": "131",
+      "label": "LESÃO CORPORAL OU MORTE POR INTERVENÇÃO POLICIAL MILITAR"
+    },
+    {
+      "value": "142",
+      "label": "ROUBO DE ARMA DE FOGO"
+    },
+    {
+      "value": "126",
+      "label": "SUÍCIDIO DE POLICIAL MILITAR DA BAHIA"
     }
   ]
 }
