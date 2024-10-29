@@ -7,10 +7,12 @@ export const AddressGroup = ({
   control,
   errors,
   index,
+  cities,
 }: {
   control: Control<any>;
   errors: FieldErrors;
   index: number;
+  cities: any;
 }) => {
   return (
     <View className="p-2 gap-2 border">
@@ -39,16 +41,14 @@ export const AddressGroup = ({
         errors={errors}
       />
 
-      <View className="mx-4">
-        <SelectGroup2
-          label="Cidade"
-          control={control}
-          name={`addresses.${index}.city_id`}
-          error={errors}
-          options={[]}
-          placeholder="Selecione uma cidade"
-        />
-      </View>
+      <SelectGroup2
+        label="Cidade"
+        control={control}
+        name={`addresses.${index}.city_id`}
+        error={errors}
+        options={cities}
+        placeholder="Selecione uma cidade"
+      />
     </View>
   );
 };

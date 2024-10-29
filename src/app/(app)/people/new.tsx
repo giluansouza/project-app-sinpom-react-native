@@ -7,15 +7,16 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { InputGroup } from "@/components/input-group";
 import {
-  getOrcrim,
+  fetchOrcrim,
   type OrcrimBody,
   type OrcrimResponse,
-} from "@/api/get-orcrim";
-// import { SelectGroup } from "@/components/select-group";
+} from "@/api/fetch-orcrim";
 import { functions, priorities } from "@/assets/data.json";
 import { SelectGroup2 } from "@/components/select-group2";
 import { AddressGroup } from "@/components/address-group";
 import { TraitGroup } from "@/components/trait-group";
+import { fetchCities, type CityBody } from "@/api/fetch-cities";
+import { Loading } from "@/components/loading";
 
 const formSchema = z.object({
   name: z.string().optional(), //.min(1, "Nome é obrigatório"),
@@ -58,8 +59,15 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
+interface ListItems {
+  label: string;
+  value: string;
+}
+
 export default function Index() {
-  const [orcrims, setOrcrims] = useState<OrcrimBody[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [orcrims, setOrcrims] = useState<ListItems[]>([]);
+  const [cities, setCities] = useState<ListItems[]>([]);
   const scrollViewRef = useRef<ScrollView>(null);
   const {
     register,
@@ -93,13 +101,35 @@ export default function Index() {
   });
 
   useEffect(() => {
-    const fetchOrcrim = async () => {
-      const response = (await getOrcrim()) as OrcrimResponse;
+    const queries = async () => {
+      setLoading(true);
+      try {
+        const [orcrimResponse, citiesResponse] = await Promise.all([
+          fetchOrcrim(),
+          fetchCities(),
+        ]);
 
-      setOrcrims(response.data);
+        setOrcrims(
+          orcrimResponse.data.map((item: OrcrimBody) => ({
+            label: item.orcrim_name,
+            value: item.id.toString(),
+          }))
+        );
+
+        setCities(
+          citiesResponse.data.map((item: CityBody) => ({
+            label: item.city_name,
+            value: item.id.toString(),
+          }))
+        );
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    fetchOrcrim();
+    queries();
   }, []);
 
   const onSubmit = (data: FormData) => {
@@ -119,11 +149,6 @@ export default function Index() {
     handleSubmit(onSubmit)();
   };
 
-  const formattedOrcrimsData = orcrims.map((item) => ({
-    label: item.orcrim_name,
-    value: item.id.toString(),
-  }));
-
   const {
     fields: addressFields,
     append: appendAddress,
@@ -141,6 +166,10 @@ export default function Index() {
     control,
     name: "traits",
   });
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <ScrollView ref={scrollViewRef} className="flex-1">
@@ -204,7 +233,12 @@ export default function Index() {
       </TouchableOpacity>
       {addressFields.map((field, index) => (
         <View key={field.id} className="mb-4 bg-zinc-300">
-          <AddressGroup control={control} errors={errors} index={index} />
+          <AddressGroup
+            control={control}
+            errors={errors}
+            index={index}
+            cities={cities}
+          />
           <TouchableOpacity
             onPress={() => removeAddress(index)}
             className="m-4 flex-row gap-2 items-center rounded-md px-4 h-12 justify-center shadow-lg bg-red-400"
@@ -240,41 +274,35 @@ export default function Index() {
 
       <View className="border-t border-zinc-300 mx-6" />
 
-      <View className="p-4">
-        <SelectGroup2
-          control={control}
-          name="crimeGroup"
-          label="Selecione o grupo-crime"
-          options={formattedOrcrimsData}
-          placeholder="Selecione o grupo-crime"
-          rules={{}}
-          error={errors}
-        />
-      </View>
+      <SelectGroup2
+        control={control}
+        name="crimeGroup"
+        label="Selecione o grupo-crime"
+        options={orcrims}
+        placeholder="Selecione o grupo-crime"
+        rules={{}}
+        error={errors}
+      />
 
-      <View className="p-4">
-        <SelectGroup2
-          control={control}
-          name="function"
-          label="Escolha a função"
-          options={functions}
-          placeholder="Selecione uma função"
-          rules={{}}
-          error={errors}
-        />
-      </View>
+      <SelectGroup2
+        control={control}
+        name="function"
+        label="Escolha a função"
+        options={functions}
+        placeholder="Selecione uma função"
+        rules={{}}
+        error={errors}
+      />
 
-      <View className="p-4">
-        <SelectGroup2
-          control={control}
-          name="priority"
-          label="Escolha a prioridade"
-          options={priorities}
-          placeholder="Selecione uma prioridade"
-          rules={{}}
-          error={errors}
-        />
-      </View>
+      <SelectGroup2
+        control={control}
+        name="priority"
+        label="Escolha a prioridade"
+        options={priorities}
+        placeholder="Selecione uma prioridade"
+        rules={{}}
+        error={errors}
+      />
 
       {/* <View className="p-4">
         <Text className="text-zinc-500">Possui registros criminais?</Text>

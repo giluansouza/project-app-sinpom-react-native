@@ -10,7 +10,7 @@ import {
   getOrcrim,
   type OrcrimBody,
   type OrcrimResponse,
-} from "@/api/get-orcrim";
+} from "@/api/fetch-orcrim";
 import { SelectFilter } from "@/components/select";
 import data from "@/assets/data.json";
 

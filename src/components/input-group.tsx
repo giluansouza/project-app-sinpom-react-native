@@ -18,7 +18,7 @@ export const InputGroup = ({
   keyboardType?: KeyboardTypeOptions;
 }) => {
   return (
-    <View className="px-4 py-3 gap-2">
+    <View className="px-4 py-2 gap-2">
       <Text className="text-gray-700 text-sm mb-1 font-medium">{label}</Text>
       <Controller
         control={control}

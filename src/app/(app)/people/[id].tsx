@@ -1,10 +1,9 @@
 import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 
-import data from "@/assets/data.json";
 import { Loading } from "@/components/loading";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import { GetPeople, type Person } from "@/api/get-people";
+import { type Person } from "@/api/fetch-people";
 import { getPeopleById } from "@/api/get-people-by-id";
 
 export default function People() {
@@ -21,7 +20,6 @@ export default function People() {
         if (!response) {
           throw new Error("Pessoa não encontrada");
         }
-        console.log(response);
 
         setPeople(response.data);
       } catch (error) {

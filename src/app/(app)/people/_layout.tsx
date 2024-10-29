@@ -8,6 +8,7 @@ export default function _layout() {
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="[id]" options={{ headerShown: false }} />
+      <Stack.Screen name="result" options={{ title: "Resultado" }} />
       <Stack.Screen
         name="new"
         options={{

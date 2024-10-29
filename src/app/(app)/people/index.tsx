@@ -1,156 +1,219 @@
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  TextInput,
-  Image,
-} from "react-native";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 
 import { Loading } from "@/components/loading";
-import { useFocusEffect, useRouter } from "expo-router";
-import { GetPeople, type PeopleResponse, type Person } from "@/api/get-people";
+import { useRouter } from "expo-router";
 import { Plus, Trash } from "lucide-react-native";
+import { z } from "zod";
+import { InputGroup } from "@/components/input-group";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SelectGroup2 } from "@/components/select-group2";
+import { fetchOrcrim, type OrcrimBody } from "@/api/fetch-orcrim";
+import { fetchCities, type CityBody } from "@/api/fetch-cities";
+
+const cpfRegex = /^\d{11}$/;
+const validateCPF = (cpf: string) => cpfRegex.test(cpf);
+
+const filterSchema = z.object({
+  name: z.string().optional(),
+  nickname: z.string().optional(),
+  enrollment: z.number().optional(),
+  mother: z.string().optional(),
+  orcrimId: z.string().optional(),
+  workArea: z.string().optional(),
+  district: z.string().optional(),
+  cityId: z.string().optional(),
+  cpf: z
+    .string()
+    .optional()
+    .refine((cpf) => !cpf || validateCPF(cpf), {
+      message: "CPF deve ter 11 dígitos numéricos",
+    }),
+  rg: z.string().optional(),
+});
+
+type FilterFormData = z.infer<typeof filterSchema>;
+
+interface ListItems {
+  label: string;
+  value: string;
+}
 
 export default function Index() {
   const navigation = useRouter();
-  const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(false);
-  const [inputName, setInputName] = useState<string>("");
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
+  const [orcrims, setOrcrims] = useState<ListItems[]>([]);
+  const [cities, setCities] = useState<ListItems[]>([]);
 
-  const fetchPeople = async (): Promise<void> => {
-    if (loading) return;
+  useEffect(() => {
+    const queries = async () => {
+      setLoading(true);
+      try {
+        const [orcrimResponse, citiesResponse] = await Promise.all([
+          fetchOrcrim(),
+          fetchCities(),
+        ]);
 
-    setLoading(true);
-    try {
-      const response = (await GetPeople({
-        page,
-        id: null,
-        name: inputName,
-      })) as PeopleResponse;
-      const newPeople = response.data;
+        setOrcrims(
+          orcrimResponse.data.map((item: OrcrimBody) => ({
+            label: item.orcrim_name,
+            value: item.id.toString(),
+          }))
+        );
 
-      setHasMore(response.current_page < response.last_page);
+        setCities(
+          citiesResponse.data.map((item: CityBody) => ({
+            label: item.city_name,
+            value: item.id.toString(),
+          }))
+        );
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      setPeople((prevPeople) => [...prevPeople, ...newPeople]);
-      setPage((prevPage) => prevPage + 1); // Incrementa a página para a próxima requisição
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
+    queries();
+  }, []);
+
+  const {
+    control,
+    formState: { errors },
+    reset,
+    handleSubmit,
+  } = useForm<FilterFormData>({
+    resolver: zodResolver(filterSchema),
+    defaultValues: {
+      orcrimId: "",
+      cityId: "",
     }
-  };
+  });
 
-  // useFocusEffect(
-  //   React.useCallback(() => {
-  //     setInputName("");
-  //     setPeople([]);
-  //     setPage(1);
-  //     setHasMore(true);
-  //   }, [])
-  // );
-
-  const handleFilter = () => {
-    if (inputName === "") {
-      return;
-    }
-
-    setPeople([]);
-    setPage(1);
-    setHasMore(true);
-    fetchPeople();
-  };
-
-  const handleClearFilter = () => {
-    setHasMore(true);
-    setInputName(""); // Limpa o input
-    setPeople([]); // Limpa a lista de pessoas
-    setPage(1); // Reseta a página para a primeira
-  };
-
-  const loadMore = () => {
-    if (hasMore && !loading) {
-      fetchPeople();
-    }
-  };
-
-  if (loading && people.length === 0) {
+  if (loading) {
     return <Loading />;
   }
 
+  const onSubmit = (data: FilterFormData) => {
+    if (Object.values(data).every((value) => !value)) {
+      reset();
+      alert("Por favor, preencha pelo menos um filtro.");
+      return;
+    }
+
+    const filteredData = Object.fromEntries(
+      Object.entries(data).filter(([_, value]) => value)
+    );
+
+    navigation.push({
+      pathname: "/(app)/people/result",
+      params: { filters: JSON.stringify(filteredData) },
+    });
+  };
+
   return (
     <View className="flex-1">
-      <View className="m-4 gap-4">
-        <View className="gap-2">
-          <Text>Nome da pessoa</Text>
-          <TextInput
-            className="border border-zinc-300 rounded-md p-2 shadow-md bg-zinc-50"
-            placeholder="Digite o nome da pessoa"
-            value={inputName}
-            onChangeText={setInputName}
-          />
-        </View>
-        <View className="flex-row gap-1">
-          <TouchableOpacity
-            className="flex-1 bg-zinc-400 rounded-md px-4 h-12 justify-center shadow-lg"
-            onPress={handleFilter}
-          >
-            <Text className="text-center text-white text-lg">Filtrar</Text>
-          </TouchableOpacity>
+      <ScrollView>
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Nome"
+          name="name"
+        />
 
-          <TouchableOpacity
-            className="bg-orange-500 rounded-md px-4 h-12 justify-center shadow-lg"
-            onPress={handleClearFilter}
-          >
-            <Trash color="white" size={24} />
-          </TouchableOpacity>
-        </View>
-      </View>
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Apelido da pessoa"
+          name="nickname"
+        />
 
-      <View className="flex-1">
-        {people.length === 0 ? ( // Mostra mensagem quando não há pessoas e o campo está vazio
-          <Text className="text-center text-gray-500">
-            Digite um nome para pesquisar!
-          </Text>
-        ) : (
-          <FlatList
-            data={people}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                onPress={() => navigation.push(`/people/${item.id}`)}
-                className="mx-4 my-2 bg-white p-4 rounded-md shadow-lg flex-row"
-              >
-                <Image
-                  source={
-                    item.image
-                      ? { uri: item.image }
-                      : require("@/assets/avatar.png")
-                  }
-                  className="w-16 h-16 rounded-full"
-                  style={{ marginRight: 16 }}
-                />
-                <View className="flex-1 justify-center">
-                  <Text className="text-lg font-bold">{item.name}</Text>
-                  <Text className="text-sm text-gray-500">CPF: {item.cpf}</Text>
-                </View>
-              </TouchableOpacity>
-            )}
-            onEndReached={loadMore}
-            onEndReachedThreshold={0.9}
-            ListFooterComponent={loading ? <Loading /> : null}
-          />
-        )}
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Matrícula de PM"
+          name="enrollment"
+          keyboardType="numeric"
+        />
+
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Nome da mãe"
+          name="mother"
+        />
+
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="CPF"
+          name="cpf"
+          keyboardType="numeric"
+        />
+
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="RG"
+          name="rg"
+          keyboardType="numeric"
+        />
+
+        <SelectGroup2
+          control={control}
+          error={errors}
+          label="Grupo-crime"
+          name="orcrimId"
+          options={orcrims}
+          placeholder="Selecione..."
+        />
+
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Área de atuação"
+          name="workArea"
+        />
+
+        <InputGroup
+          control={control}
+          errors={errors}
+          label="Bairro"
+          name="district"
+        />
+
+        <SelectGroup2
+          control={control}
+          error={errors}
+          label="Cidade"
+          name="cityId"
+          options={cities}
+          placeholder="Selecione..."
+        />
+      </ScrollView>
+
+      <View className="mx-4 mt-4 flex-row gap-1">
+        <TouchableOpacity
+          className="flex-1 bg-zinc-600 rounded-md px-4 h-12 justify-center shadow-lg"
+          onPress={handleSubmit(onSubmit)}
+        >
+          <Text className="text-center text-white text-lg">Consultar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          className="bg-orange-500 rounded-md px-4 h-12 justify-center shadow-lg"
+          onPress={() => reset()}
+        >
+          <Trash color="white" size={24} />
+        </TouchableOpacity>
       </View>
       <TouchableOpacity
         className="m-4 flex-row gap-2 items-center bg-blue-500 rounded-md px-4 h-12 justify-center shadow-lg"
         onPress={() => navigation.push("/(app)/people/new")}
       >
         <Plus color="white" size={24} />
-        <Text className="text-white text-lg">Nova</Text>
+        <Text className="text-white text-lg">Nova pessoa</Text>
       </TouchableOpacity>
     </View>
   );
