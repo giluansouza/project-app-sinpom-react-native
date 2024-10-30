@@ -5,9 +5,9 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Loading } from "@/components/loading";
-import { useRouter } from "expo-router";
+import { useFocusEffect, useRouter } from "expo-router";
 import { Filter, Plus, Trash } from "lucide-react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { fetchOccurrences, type OccurrenceBody } from "@/api/fetch-occurrences";
@@ -48,9 +48,14 @@ export default function index() {
     }
   };
 
-  useEffect(() => {
-    queryOccurrences();
-  }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      setOccurrences([]);
+      setPage(1);
+      setHasMore(true);
+      queryOccurrences();
+    }, [dateStart, dateEnd])
+  );
 
   const handleFilter = async (formData: any) => {
     if (!dateStart && !dateEnd) {
