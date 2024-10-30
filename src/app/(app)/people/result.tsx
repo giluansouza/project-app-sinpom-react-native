@@ -23,7 +23,6 @@ export default function Result() {
   const { filters } = useGlobalSearchParams();
   const [people, setPeople] = useState<Person[]>([]);
   const [loading, setLoading] = useState(false);
-  const [inputName, setInputName] = useState<string>("");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
@@ -43,7 +42,7 @@ export default function Result() {
       setHasMore(response.current_page < response.last_page);
 
       setPeople((prevPeople) => [...prevPeople, ...newPeople]);
-      setPage((prevPage) => prevPage + 1); // Incrementa a página para a próxima requisição
+      setPage((prevPage) => prevPage + 1);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -54,24 +53,6 @@ export default function Result() {
   useEffect(() => {
     queryPeople();
   }, []);
-
-  const handleFilter = () => {
-    if (inputName === "") {
-      return;
-    }
-
-    setPeople([]);
-    setPage(1);
-    setHasMore(true);
-    queryPeople();
-  };
-
-  const handleClearFilter = () => {
-    setHasMore(true);
-    setInputName(""); // Limpa o input
-    setPeople([]); // Limpa a lista de pessoas
-    setPage(1); // Reseta a página para a primeira
-  };
 
   const loadMore = () => {
     if (hasMore && !loading) {

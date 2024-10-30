@@ -59,8 +59,6 @@ export const fetchPeople = async ({
     if (value) url += `&${key}=${encodeURIComponent(value)}`;
   });
 
-  console.log(url);
-
   try {
     const response = await axios.get(url, {
       headers: {
