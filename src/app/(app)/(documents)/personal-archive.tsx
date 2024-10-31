@@ -1,64 +1,65 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { outputDocuments} from '@/assets/data.json'
-import { Link, useNavigation } from 'expo-router'
-import { Loading } from '@/components/loading'
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
+import React, { useEffect, useState } from "react";
+import { outputDocuments } from "@/assets/data.json";
+import { Link, useNavigation, usePathname } from "expo-router";
+import { Loading } from "@/components/loading";
+import { DocumentoButtonGroup } from "@/components/documents-button-group";
 
 export default function PersonalArchive() {
-  const [documents, setDocuments] = useState<{ 
-    id: number,
-    origin: string,
-    date: string,
-    status: string,
-    title: string,
-    content: string 
-  }[] | null>(null)
-  const [loading, setLoading] = useState(true)
-  const navigation = useNavigation()
+  const [documents, setDocuments] = useState<
+    | {
+        id: number;
+        origin: string;
+        date: string;
+        status: string;
+        title: string;
+        content: string;
+      }[]
+    | null
+  >(null);
+  const [loading, setLoading] = useState(true);
+  const navigation = useNavigation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         await new Promise((resolve) => setTimeout(resolve, 800));
-        
-        setDocuments(outputDocuments)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
 
-    fetchData()
-  }, [])
+        setDocuments(outputDocuments);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
-    <View className='flex-1'>
-      <View className='flex flex-row justify-between p-4'>
-        <Link href='/(app)/(documents)/entry' asChild>
-          <TouchableOpacity 
-            className='flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2'>
-            <Text>Entrada</Text>
-          </TouchableOpacity>
-        </Link>
-        <Link href='/(app)/(documents)/output' asChild>
-          <TouchableOpacity 
-            className='flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2'>
-            <Text>Saída</Text>
-          </TouchableOpacity>
-        </Link>
-        <Link href='/(app)/(documents)/my-drafts' asChild>
-          <TouchableOpacity 
-            className='flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2'>
-            <Text>Meus rascunhos</Text>
-          </TouchableOpacity>
-        </Link>
+    <View className="flex-1">
+      <View>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{ paddingHorizontal: 16 }}
+        >
+          <DocumentoButtonGroup pathname={pathname} />
+        </ScrollView>
       </View>
-      <View className='flex-1 justify-center items-center'>
+
+      <View className="flex-1 justify-center items-center">
         <Text>Nenhum documento encontrado</Text>
       </View>
       {/* <FlatList 
@@ -96,5 +97,5 @@ export default function PersonalArchive() {
         </View>}
       /> */}
     </View>
-  )
+  );
 }

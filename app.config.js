@@ -43,6 +43,12 @@ export default {
       resizeMode: "contain",
       backgroundColor: "#ffffff"
     },
+    updates: {
+      url: "https://u.expo.dev/efc8f778-0b9e-405b-a657-ac83ee4ddf19",
+    },
+    runtimeVersion: {
+      policy: "appVersion",
+    },
     ios: {
       bundleIdentifier: getUniqueIdentifier(),
       supportsTablet: true

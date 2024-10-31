@@ -6,9 +6,10 @@ import { useSession } from "@/utils/context";
 import Header from "@/components/header";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Loading } from "@/components/loading";
+import { View } from "react-native";
 
 export default function AppLayout() {
-  const { session, isLoading } = useSession();
+  const { session, isLoading, user } = useSession();
 
   if (isLoading) {
     return <Loading />;

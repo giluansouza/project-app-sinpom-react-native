@@ -1,12 +1,27 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import {
+  ScrollView,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useEffect, useState } from "react";
-import { Link, useRouter } from "expo-router";
+import { usePathname, useRouter } from "expo-router";
 import { Loading } from "@/components/loading";
 import { documents as inputDocuments } from "@/assets/data.json";
-import { ChevronDown } from "lucide-react-native";
+import {
+  ChevronDown,
+  FileInput,
+  FileOutputIcon,
+  NotepadTextDashedIcon,
+  Plus,
+} from "lucide-react-native";
+import { ButtonFloat } from "@/components/button-float";
+import { DocumentoButtonGroup } from "@/components/documents-button-group";
 
 export default function index() {
   const navigation = useRouter();
+  const pathname = usePathname();
   const [documents, setDocuments] = useState<
     | {
         id: number;
@@ -58,24 +73,9 @@ export default function index() {
         )}
         keyExtractor={(item) => item.id.toString()}
         ListHeaderComponent={() => (
-          <View className="flex flex-row justify-between p-4">
-            {/* <Link href="" asChild> */}
-            <TouchableOpacity className="flex-row gap-1 justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2">
-              <Text>Novo documento</Text>
-              <ChevronDown size={16} color={"black"} />
-            </TouchableOpacity>
-            {/* </Link> */}
-            <Link href="/(documents)/output" asChild>
-              <TouchableOpacity className="flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2">
-                <Text>Saída</Text>
-              </TouchableOpacity>
-            </Link>
-            {/* <Link href="/(documents)/personal-archive" asChild>
-              <TouchableOpacity className="flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2">
-                <Text>Arquivo pessoal</Text>
-              </TouchableOpacity>
-            </Link> */}
-          </View>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <DocumentoButtonGroup pathname={pathname} />
+          </ScrollView>
         )}
       />
     </View>

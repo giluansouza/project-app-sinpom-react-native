@@ -21,7 +21,7 @@ export default function Header({ title }: { title: string }) {
 
   return (
     <SafeAreaView>
-      <View className="w-full gap-4 px-4 h-16 flex-row items-center justify-between bg-slate-600">
+      <View className="w-full gap-4 px-4 h-16 flex-row items-center justify-between bg-zinc-700">
         <TouchableOpacity
           onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
         >

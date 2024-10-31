@@ -1,9 +1,16 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { outputDocuments } from "@/assets/data.json";
-import { Link, useNavigation } from "expo-router";
+import { Link, useNavigation, usePathname } from "expo-router";
 import { Loading } from "@/components/loading";
 import { ChevronDown } from "lucide-react-native";
+import { DocumentoButtonGroup } from "@/components/documents-button-group";
 
 export default function index() {
   const [documents, setDocuments] = useState<
@@ -19,6 +26,7 @@ export default function index() {
   >(null);
   const [loading, setLoading] = useState(true);
   const navigation = useNavigation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,18 +63,9 @@ export default function index() {
         )}
         keyExtractor={(item) => item.id.toString()}
         ListHeaderComponent={() => (
-          <View className="flex flex-row justify-between p-4">
-            <TouchableOpacity className="flex-row gap-1 justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2">
-              <Text>Novo documento</Text>
-              <ChevronDown size={16} color={"black"} />
-            </TouchableOpacity>
-            {/* </Link> */}
-            <Link href="/(documents)/entry" asChild>
-              <TouchableOpacity className="flex justify-center items-center bg-white border rounded-md h-10 min-w-16 px-2">
-                <Text>Entrada</Text>
-              </TouchableOpacity>
-            </Link>
-          </View>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <DocumentoButtonGroup pathname={pathname} />
+          </ScrollView>
         )}
       />
     </View>

@@ -1,3 +1,4 @@
+import "expo-dev-client";
 import "@/styles/global.css";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import React from "react";

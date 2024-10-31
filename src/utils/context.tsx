@@ -69,7 +69,8 @@ export function SessionProvider({ children }: PropsWithChildren) {
       if (e.response?.status === 422) {
         return "Usuário ou senha inválidos";
       }
-      return "Erro ao realizar login";
+      return "Erro: " + e.message;
+      console.log(e);
     }
   };
 
